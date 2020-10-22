@@ -1,11 +1,11 @@
-const canvas = document.getElementById("example");
-const ctx = canvas.getContext("2d");
+const canvasElement = document.getElementById("example");
+const context = canvasElement.getContext("2d");
 
 /* DRAWING RECTANGLES */
 const drawFillRectangle = () => {
-  ctx.fillStyle = "purple";
+  context.fillStyle = "purple";
   // fillRect(x-axis, y-axis, width, height)
-  ctx.fillRect(260, 260, 30, 30);
+  context.fillRect(260, 260, 30, 30);
 };
 
 const drawStrokeRectangle = () => {
@@ -16,8 +16,8 @@ const drawStrokeRectangle = () => {
     height: 30,
   };
 
-  ctx.strokeStyle = "green";
-  ctx.strokeRect(
+  context.strokeStyle = "green";
+  context.strokeRect(
     strokeCoordinates.x,
     strokeCoordinates.y,
     strokeCoordinates.width,
@@ -28,51 +28,51 @@ const drawStrokeRectangle = () => {
 /* DRAWING PATHS */
 
 const drawRectPath = () => {
-  ctx.beginPath();
+  context.beginPath();
 
   // top
-  ctx.moveTo(50, 50);
-  ctx.lineTo(250, 50);
+  context.moveTo(50, 50);
+  context.lineTo(250, 50);
 
   // right
-  ctx.moveTo(250, 50);
-  ctx.lineTo(250, 100);
+  context.moveTo(250, 50);
+  context.lineTo(250, 100);
 
   // bottom
-  ctx.moveTo(250, 100);
-  ctx.lineTo(50, 100);
+  context.moveTo(250, 100);
+  context.lineTo(50, 100);
 
   // left
-  ctx.moveTo(50, 100);
-  ctx.lineTo(50, 50);
+  context.moveTo(50, 100);
+  context.lineTo(50, 50);
 
-  ctx.strokeStyle = "black";
-  ctx.stroke();
-  ctx.closePath();
+  context.strokeStyle = "black";
+  context.stroke();
+  context.closePath();
 };
 
 /* ARCS */
 const drawBullsEye = () => {
-  ctx.beginPath();
+  context.beginPath();
 
-  ctx.arc(150, 170, 75, 0, Math.PI * 2);
-  ctx.strokeStyle = "green";
-  ctx.lineWidth = 20;
-  ctx.stroke();
-  ctx.closePath();
+  context.arc(150, 170, 75, 0, Math.PI * 2);
+  context.strokeStyle = "green";
+  context.lineWidth = 20;
+  context.stroke();
+  context.closePath();
 
-  ctx.beginPath();
-  ctx.arc(150, 170, 55, 0, Math.PI * 2);
-  ctx.fillStyle = "red";
-  ctx.fill();
-  ctx.closePath();
+  context.beginPath();
+  context.arc(150, 170, 55, 0, Math.PI * 2);
+  context.fillStyle = "red";
+  context.fill();
+  context.closePath();
 };
 
 /* TEXT */
 const drawText = () => {
-  ctx.fillStyle = "orange";
-  ctx.font = "20px Arial";
-  ctx.fillText("Ironhack", 20, 40);
+  context.fillStyle = "orange";
+  context.font = "20px Arial";
+  context.fillText("Ironhack", 20, 40);
 };
 
 // Second part
@@ -88,12 +88,12 @@ let deuceBigX = 0;
 let deuceBigY = 0;
 
 const draw = (x, y) => {
-  ctx.clearRect(0, 0, 300, 300);
+  context.clearRect(0, 0, 300, 300);
 
-  ctx.drawImage(deuceBigImage, deuceBigX, deuceBigY, 100, 100);
+  context.drawImage(deuceBigImage, deuceBigX, deuceBigY, 100, 100);
 
-  /* ctx.fillStyle = "green";
-  ctx.fillRect(x, 0, 50, 50); */
+  /* context.fillStyle = "green";
+  context.fillRect(x, 0, 50, 50); */
   // changes position of X coordinate
   deuceBigX += 3;
 

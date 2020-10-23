@@ -4,7 +4,6 @@ const context = canvasElement.getContext("2d");
 /* DRAWING RECTANGLES */
 const drawFillRectangle = () => {
   context.fillStyle = "purple";
-  // fillRect(x-axis, y-axis, width, height)
   context.fillRect(260, 260, 30, 30);
 };
 

@@ -17,3 +17,7 @@ canvas {
   background-color: #fffff0;
   border: 1px solid red;
 }
+
+p {
+  color: #555;
+}

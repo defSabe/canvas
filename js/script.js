@@ -82,14 +82,10 @@ const deuceBigImage = new Image();
 // set src
 deuceBigImage.src = "../images/deuce.jpg";
 
-// position
-let deuceBigX = 0;
-let deuceBigY = 0;
-
 const draw = (x, y) => {
   context.clearRect(0, 0, 300, 300);
 
-  context.drawImage(deuceBigImage, deuceBigX, deuceBigY, 100, 100);
+  context.drawImage(deuceBigImage, 0, 0, 100, 100);
 
   /* context.fillStyle = "green";
   context.fillRect(x, 0, 50, 50); */
